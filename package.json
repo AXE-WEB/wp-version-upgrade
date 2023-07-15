@@ -1,6 +1,6 @@
 {
 	"name": "wp-version-upgrade",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A command line tool for semantic version management of your WordPress plugins/themes, ideal for integration into CI/CD pipelines.",
 	"author": "Roman Axelrod <office@axe-web.com> (https://axe-web.com/)",
 	"main": "./index.js",
