@@ -28,10 +28,10 @@ Each command initiates a different function:
 
 * `npx wp-version-upgrade`: runs the script, updating the "patch" version by default.
 * `npx wp-version-upgrade --file=your-plugin.php`: specifies the file to update.
-* `npx wp-version-upgrade --patch`: increments the patch version number. (1.0.x)
-* `npx wp-version-upgrade --minor`: increments the minor version number. (1.x.0)
-* `npx wp-version-upgrade --major`: increments the major version number. (x.0.0)
-* `npx wp-version-upgrade --build=123`: adds the build number to the version. (1.0.0-123)
+* `npx wp-version-upgrade --patch`: increments the patch version number. (`1.0.x`)
+* `npx wp-version-upgrade --minor`: increments the minor version number. (`1.x.0`)
+* `npx wp-version-upgrade --major`: increments the major version number. (`x.0.0`)
+* `npx wp-version-upgrade --build=123`: adds the build number to the version. (`1.0.0-123`)
 * `npx wp-version-upgrade --force=1.1.20-alpha.1`: forces the version to the specified version (in this case,
-  1.1.20-alpha.1).
+  `1.1.20-alpha.1`).
 
