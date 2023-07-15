@@ -10,16 +10,15 @@ const currentVersion = getVersion({
 });
 
 let type = 'patch';
-if (args?.minor) {
+if (args?.build) {
+  type = 'build';
+} else if (args?.minor) {
   type = 'minor';
 } else if (args?.major) {
   type = 'major';
 }
 
-let nextVersion = args?.force || getNextVersion(currentVersion, type);
-if (args?.build) {
-  nextVersion = `${nextVersion}-${args?.build}`;
-}
+const nextVersion = args?.force || getNextVersion(currentVersion, type, args?.build);
 
 upgradeVersion(nextVersion, currentPath, args?.file);
 

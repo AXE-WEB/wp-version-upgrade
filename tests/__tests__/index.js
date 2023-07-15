@@ -76,6 +76,15 @@ describe('Write version', () => {
     expect(newVersion).toBe('101.0.0');
   });
 
+  test('Build version', () => {
+    const version = getNextVersion('101.0.0', 'build', 'build.123');
+
+    upgradeVersion(version, __dirname);
+
+    const newVersion = getVersion({path: __dirname});
+    expect(newVersion).toBe('101.0.0-build.123');
+  });
+
   test('Custom version', () => {
     const nextVersion = '1.2.3-build.123';
 

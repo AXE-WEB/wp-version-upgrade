@@ -1,4 +1,4 @@
-import {inc, patch} from 'semver';
+import {coerce, inc, patch} from 'semver';
 import {getPackageJsonVersion, updatePackageJson} from "./libs/package-files.js";
 import {getThemeOrPluginVersion, updatePluginFile, upgradeThemeFile} from "./libs/wp-files.js";
 
@@ -15,7 +15,11 @@ export function getVersion(args = {}) {
   return getThemeOrPluginVersion(sourceDir, args.file);
 }
 
-export function getNextVersion(version = '0.0.0', type = 'patch') {
+export function getNextVersion(version = '0.0.0', type = 'patch', build) {
+  if (build) {
+    return `${coerce(version).version}-${build}`;
+  }
+
   if (['major', 'minor', 'patch'].indexOf(type) === -1) {
     type = 'patch';
   }
