@@ -35,7 +35,7 @@
 		"command"
 	],
 	"bin": {
-		"wp-version-bump": "index.js"
+		"wp-version-upgrade": "index.js"
 	},
 	"license": "MIT",
 	"engines": {
