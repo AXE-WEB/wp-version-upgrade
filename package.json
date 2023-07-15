@@ -1,0 +1,44 @@
+{
+	"name": "wp-version-upgrade",
+	"version": "1.0.0",
+	"description": "A command line tool for semantic version management of your WordPress plugins/themes, ideal for integration into CI/CD pipelines.",
+	"author": "Roman Axelrod <office@axe-web.com> (https://axe-web.com/)",
+	"main": "./index.js",
+	"type": "module",
+	"scripts": {
+		"test": "jest",
+		"test--watch": "jest --watchAll"
+	},
+	"files": [
+		"src/**/*"
+	],
+	"dependencies": {
+		"semver": "^7.5.4",
+		"yargs": "^17.7.2"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.22.9",
+		"@jest/globals": "^29.6.1",
+		"babel-jest": "^29.6.1",
+		"jest": "^29.6.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AXE-WEB/wp-version-upgrade"
+	},
+	"keywords": [
+		"wp",
+		"wordpress",
+		"version",
+		"semantic",
+		"cli",
+		"command"
+	],
+	"bin": {
+		"wp-version-bump": "index.js"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=16"
+	}
+}

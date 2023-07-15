@@ -1,0 +1,11 @@
+.idea
+**/.idea
+
+node_modules
+**/node_modules
+
+# Test files
+tests/__tests__/package.json
+tests/__tests__/package-lock.json
+tests/__tests__/style.css
+tests/__tests__/plugin.php

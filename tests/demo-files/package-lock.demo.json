@@ -1,0 +1,9 @@
+{
+	"name": "test-theme",
+	"version": "100.0.1",
+	"author": "TEST <test@test.com>",
+	"lockfileVersion": 3,
+	"requires": true,
+	"packages": {
+	}
+}
