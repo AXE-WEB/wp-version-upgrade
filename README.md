@@ -7,7 +7,7 @@ version.
 The package also offers a feature that allows you to manually set the version, which could be beneficial when
 incorporated into Continuous Integration/Continuous Deployment (CI/CD) pipelines, allowing for build version inclusion.
 
-![Demo of CLI](https://github.com/AXE-WEB/wp-version-upgrade/blob/master/demo.gif)
+![Demo of CLI](https://raw.githubusercontent.com/AXE-WEB/wp-version-upgrade/master/demo.gif)
 
 # How to Use
 
