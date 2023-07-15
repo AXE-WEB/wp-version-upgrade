@@ -7,6 +7,8 @@ version.
 The package also offers a feature that allows you to manually set the version, which could be beneficial when
 incorporated into Continuous Integration/Continuous Deployment (CI/CD) pipelines, allowing for build version inclusion.
 
+![Demo of CLI](https://github.com/AXE-WEB/wp-version-upgrade/blob/master/demo.gif)
+
 # How to Use
 
 Execute these commands within the root directory of your plugin or theme:
@@ -32,3 +34,4 @@ Each command initiates a different function:
 * `npx wp-version-upgrade --build=123`: adds the build number to the version. (1.0.0-123)
 * `npx wp-version-upgrade --force=1.1.20-alpha.1`: forces the version to the specified version (in this case,
   1.1.20-alpha.1).
+
