@@ -8,4 +8,4 @@ node_modules
 tests/__tests__/package.json
 tests/__tests__/package-lock.json
 tests/__tests__/style.css
-tests/__tests__/plugin.php
+tests/__tests__/plugin**.php

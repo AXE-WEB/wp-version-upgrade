@@ -2,6 +2,7 @@ import {describe, expect, test} from '@jest/globals';
 import {getNextVersion, getVersion, upgradeVersion} from "../../src";
 import {createDemoFiles} from "../helper";
 import {checkIfJsonFileExists} from "../../src/libs/package-files";
+import {updatePluginFile} from "../../src/libs/wp-files";
 
 createDemoFiles();
 
@@ -22,6 +23,11 @@ describe('Read/Get version', () => {
     expect(version).toBe('1.6');
   });
 
+  test('Read version plugin-comment.php', () => {
+    const version = getVersion({path: __dirname, file: 'plugin-comment.php'});
+    expect(version).toBe('1.2.3');
+  });
+
   test('Get next version', () => {
     const nextVersion = getNextVersion('100.0.14');
     expect(nextVersion).toBe('100.0.15');
@@ -38,6 +44,16 @@ describe('Write version', () => {
 
     const newVersion = getVersion({path: __dirname});
     expect(newVersion).toBe('100.0.15');
+  });
+
+  test('Upgrade versions in plugin-comment file', () => {
+    const version = getVersion({path: __dirname, file: 'plugin-comment.php'});
+    const nextVersion = getNextVersion(version);
+
+    updatePluginFile(nextVersion, __dirname, 'plugin-comment.php');
+
+    const newVersion = getVersion({path: __dirname, file: 'plugin-comment.php'});
+    expect(newVersion).toBe('1.2.4');
   });
 
   test('Make sure version in package.json and package-lock.json updated as well.', () => {

@@ -13,4 +13,5 @@ export function createDemoFiles() {
 
   // Copy plugin.demo.php.
   fs.copyFileSync(demoFilesPath + '/plugin.demo.php', testPath + '/plugin.php');
+  fs.copyFileSync(demoFilesPath + '/plugin-comment.demo.php', testPath + '/plugin-comment.php');
 }

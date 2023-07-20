@@ -56,7 +56,7 @@ export function getThemeOrPluginVersion(sourceDir, fileName) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     if (line.indexOf('Version:') !== -1) {
-      return line.replace('Version:', '').trim();
+      return line.replace('Version:', '').split(' ').pop().trim();
     }
   }
 
